@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>אתרים חסומים</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <h1>אתרים חסומים</h1>
+    <form id="add-form">
+      <input id="new-site" type="text" dir="ltr" placeholder="youtube.com" autocomplete="off" autofocus>
+      <button type="submit">הוסף</button>
+    </form>
+    <p id="error" class="error" hidden>כתובת לא תקינה</p>
+    <ul id="list"></ul>
+    <p id="empty" class="muted" hidden>הרשימה ריקה — שום אתר לא חסום.</p>
+    <p class="muted">חסימה של דומיין חוסמת גם את כל תתי-הדומיינים שלו (למשל m.facebook.com).</p>
+    <details id="bulk">
+      <summary>עריכה כטקסט (ייבוא / ייצוא)</summary>
+      <p class="muted">אתר אחד בכל שורה. אפשר להעתיק מכאן ולהדביק במחשב אחר.</p>
+      <textarea id="bulk-text" dir="ltr" rows="10"></textarea>
+      <button id="bulk-save" type="button">שמור רשימה</button>
+      <span id="bulk-status" class="muted"></span>
+    </details>
+  </main>
+  <script src="common.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
